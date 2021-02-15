@@ -31,9 +31,9 @@
 export default {
   data() {
     return {
-      health:"",
-      hospital:"",
-      surgery:"",
+      health:'',
+      hospital:'',
+      surgery:'',
     }
   },
 }
