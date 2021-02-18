@@ -6,7 +6,7 @@
     <br>
     <br>
     <router-link to="/questionnaire" tag="button">前へ戻る</router-link>
-    <button>次へ進む</button>
+    <router-link to="/confirmation" tag="button">次へ進む</router-link>  
   </div>
 </template>
 
@@ -14,9 +14,19 @@
 export default {
   data() {
     return {
-      consultation:'',
+      // consultation:'',
     }
   },
+  computed:{
+    consultation:{
+      get(){
+        return this.$store.getters.consultation
+      },
+      set(value){
+        this.$store.dispatch("updateConsultation",value)
+      }
+    },
+  }
 }
 </script>
 

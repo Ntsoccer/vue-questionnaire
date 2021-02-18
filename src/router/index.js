@@ -3,12 +3,13 @@ import VueRouter from 'vue-router'
 import Customer from '../views/Customer.vue'
 import Questionnaire from '../views/Questionnaire.vue'
 import Consultation from '../views/Consultation.vue'
+import Confirmation from '../views/Confirmation.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/customer',
+    path: '/',
     name: 'Customer',
     component: Customer
   },
@@ -21,7 +22,12 @@ const routes = [
     path: '/consultation',
     name: 'Consultation',
     component: Consultation
-  }
+  },
+  {
+    path: '/confirmation',
+    name: 'Confirmation',
+    component: Confirmation
+  },
 ]
 
 const router = new VueRouter({

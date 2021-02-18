@@ -28,18 +28,52 @@ import { years,months,days } from '../utiles/definition.js'
 export default {
   data() {
     return {
-      sex:'',
+      // sex:'',
       years,
-      year:'',
+      // year:'',
       months,
-      month:'',
+      // month:'',
       days,
-      day:''
+      // day:''
     }
   },
+  computed:{
+    sex:{
+      get(){
+        return this.$store.getters.sex
+      },
+      set(value){
+        this.$store.dispatch("updateSex",value);
+      }
+    },
+    year:{
+      get(){
+        return this.$store.getters.year
+      },
+      set(value){
+        this.$store.dispatch("updateYear",value);
+      }
+    },
+    month:{
+      get(){
+        return this.$store.getters.month
+      },
+      set(value){
+        this.$store.dispatch("updateMonth",value);
+      }
+    },
+    day:{
+      get(){
+        return this.$store.getters.day
+      },
+      set(value){
+        this.$store.dispatch("updateDay",value);
+      }
+    },
+  }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

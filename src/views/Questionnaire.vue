@@ -21,7 +21,7 @@
       <label for="surgery2">いいえ</label>
     </div>
     <br><br>
-    <router-link to="/customer" tag="button">前へ戻る</router-link>
+    <router-link to="/" tag="button">前へ戻る</router-link>
     <router-link to="/consultation" tag="button">次へ進む</router-link>
   </div>
 
@@ -31,11 +31,37 @@
 export default {
   data() {
     return {
-      health:'',
-      hospital:'',
-      surgery:'',
+      // health:'',
+      // hospital:'',
+      // surgery:'',
     }
   },
+  computed:{
+    health:{
+      get(){
+        return this.$store.getters.health
+      },
+      set(value){
+        this.$store.dispatch("updateHealth",value);
+      }
+    },
+    hospital:{
+      get(){
+        return this.$store.getters.hospital
+      },
+      set(value){
+        this.$store.dispatch("updateHospital",value)
+      }
+    },
+    surgery:{
+      get(){
+        return this.$store.getters.surgery
+      },
+      set(value){
+        this.$store.dispatch("updateSurgery",value)
+      }
+    },
+  }
 }
 </script>
 
