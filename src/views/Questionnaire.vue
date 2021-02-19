@@ -29,13 +29,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      // health:'',
-      // hospital:'',
-      // surgery:'',
-    }
-  },
   computed:{
     health:{
       get(){

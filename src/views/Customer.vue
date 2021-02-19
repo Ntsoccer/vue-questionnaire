@@ -28,13 +28,9 @@ import { years,months,days } from '../utiles/definition.js'
 export default {
   data() {
     return {
-      // sex:'',
       years,
-      // year:'',
       months,
-      // month:'',
       days,
-      // day:''
     }
   },
   computed:{

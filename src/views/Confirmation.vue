@@ -20,72 +20,10 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   computed:{
-    sex:{
-      get(){
-        return this.$store.getters.sex
-      },
-      set(value){
-        this.$store.dispatch("updateSex",value);
-      }
-    },
-    year:{
-      get(){
-        return this.$store.getters.year
-      },
-      set(value){
-        this.$store.dispatch("updateYear",value);
-      }
-    },
-    month:{
-      get(){
-        return this.$store.getters.month
-      },
-      set(value){
-        this.$store.dispatch("updateMonth",value);
-      }
-    },
-    day:{
-      get(){
-        return this.$store.getters.day
-      },
-      set(value){
-        this.$store.dispatch("updateDay",value);
-      }
-    },
-    health:{
-      get(){
-        return this.$store.getters.health
-      },
-      set(value){
-        this.$store.dispatch("updateHealth",value)
-      }
-    },
-    hospital:{
-      get(){
-        return this.$store.getters.hospital
-      },
-      set(value){
-        this.$store.dispatch("updateHospital",value)
-      }
-    },
-    surgery:{
-      get(){
-        return this.$store.getters.surgery
-      },
-      set(value){
-        this.$store.dispatch("updateSurgery",value)
-      }
-    },
-    consultation:{
-      get(){
-        return this.$store.getters.consultation
-      },
-      set(value){
-        this.$store.dispatch("updateConsultation",value)
-      }
-    }
+    ...mapGetters(["sex","year","month","day","health","hospital","surgery","consultation"]),
   }
 }
 </script>

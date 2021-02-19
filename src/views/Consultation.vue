@@ -12,11 +12,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      // consultation:'',
-    }
-  },
   computed:{
     consultation:{
       get(){
